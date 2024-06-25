@@ -2,7 +2,7 @@
 
 namespace App\Tests\Unit\SearchEngine\Filter;
 
-use App\DataProvider\MoviesProvider;
+use App\DataProvider\Interface\DataProviderInterface;
 use App\Service\SearchEngine\Filter\StartsWithLetterFilter;
 use App\Service\SearchEngine\SearchEngine;
 use App\Tests\Unit\Utils\FilterableProviderUtil;
@@ -19,7 +19,7 @@ class StartWithLetterFilterTest extends TestCase
         string $letter,
         int $expectedCount,
     ): void {
-        $recommendableProviderMock = $this->getMockBuilder(MoviesProvider::class)
+        $recommendableProviderMock = $this->getMockBuilder(DataProviderInterface::class)
             ->disableOriginalConstructor()
             ->onlyMethods(['getAll'])
             ->getMock();

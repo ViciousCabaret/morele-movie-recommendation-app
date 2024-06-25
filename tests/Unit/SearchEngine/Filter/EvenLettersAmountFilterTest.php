@@ -2,7 +2,7 @@
 
 namespace App\Tests\Unit\SearchEngine\Filter;
 
-use App\DataProvider\MoviesProvider;
+use App\DataProvider\Interface\DataProviderInterface;
 use App\Service\SearchEngine\Filter\EvenLettersAmountFilter;
 use App\Service\SearchEngine\SearchEngine;
 use App\Tests\Unit\Utils\FilterableProviderUtil;
@@ -18,7 +18,7 @@ class EvenLettersAmountFilterTest extends TestCase
         array $data,
         int $expectedCount,
     ): void {
-        $recommendableProviderMock = $this->getMockBuilder(MoviesProvider::class)
+        $recommendableProviderMock = $this->getMockBuilder(DataProviderInterface::class)
             ->disableOriginalConstructor()
             ->onlyMethods(['getAll'])
             ->getMock();

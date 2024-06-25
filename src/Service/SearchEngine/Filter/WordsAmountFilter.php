@@ -18,7 +18,7 @@ readonly class WordsAmountFilter implements FilterInterface
 
     public function getFilterAlgorithm(): Closure
     {
-        return function(FilterableInterface $filterable) {
+        return function (FilterableInterface $filterable) {
             if ($this->modeEnum === WordsAmountFilterModeEnum::EXACT) {
                 if (count(explode(' ', trim($filterable->getFilterableField()))) == $this->wordsAmount) {
                     return $filterable;

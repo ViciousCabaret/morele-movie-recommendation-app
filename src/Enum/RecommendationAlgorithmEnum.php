@@ -17,7 +17,8 @@ enum RecommendationAlgorithmEnum: string
         return match ($this) {
             self::THREE_RANDOM_MOVIES_RECOMMENDATION => ThreeRandomMoviesRecommendation::class,
             self::MULTI_WORD_RECOMMENDATION => MultiWordTitleRecommendation::class,
-            self::EVEN_LETTERS_WITH_LETTER_W_IN_TITLE_RECOMMENDATION => EvenLettersInTitleAndStartsWithLetterWRecommendation::class,
+            self::EVEN_LETTERS_WITH_LETTER_W_IN_TITLE_RECOMMENDATION
+            => EvenLettersInTitleAndStartsWithLetterWRecommendation::class,
         };
     }
 }

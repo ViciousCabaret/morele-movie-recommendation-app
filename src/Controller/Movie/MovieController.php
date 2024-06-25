@@ -41,7 +41,7 @@ class MovieController extends AbstractController
             new GetMovieRecommendationsQuery($recommendation)
         )->last(HandledStamp::class)->getResult();
 
-        $results = array_map(function(MovieDTO $movie) {
+        $results = array_map(function (MovieDTO $movie) {
             return $movie->getTitle();
         }, $results);
 

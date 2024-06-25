@@ -2,7 +2,7 @@
 
 namespace App\Tests\Unit\SearchEngine\Filter;
 
-use App\DataProvider\MoviesProvider;
+use App\DataProvider\Interface\DataProviderInterface;
 use App\Enum\WordsAmountFilterModeEnum;
 use App\Service\SearchEngine\Filter\WordsAmountFilter;
 use App\Service\SearchEngine\SearchEngine;
@@ -21,7 +21,7 @@ class WordsAmountFilterTest extends TestCase
         int $wordsRequestedCount,
         int $expectedCount,
     ): void {
-        $recommendableProviderMock = $this->getMockBuilder(MoviesProvider::class)
+        $recommendableProviderMock = $this->getMockBuilder(DataProviderInterface::class)
             ->disableOriginalConstructor()
             ->onlyMethods(['getAll'])
             ->getMock();

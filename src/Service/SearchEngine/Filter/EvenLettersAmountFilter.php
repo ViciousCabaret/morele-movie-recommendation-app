@@ -11,7 +11,7 @@ readonly class EvenLettersAmountFilter implements FilterInterface
 {
     public function getFilterAlgorithm(): Closure
     {
-        return function(FilterableInterface $filterable) {
+        return function (FilterableInterface $filterable) {
             if (trim(strlen($filterable->getFilterableField())) % 2 == 0) {
                 return $filterable;
             }

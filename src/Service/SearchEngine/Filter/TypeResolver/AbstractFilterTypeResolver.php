@@ -12,5 +12,5 @@ abstract class AbstractFilterTypeResolver implements FilterTypeResolverInterface
     ) {
     }
 
-    public abstract function filter(): array;
+    abstract public function filter(): array;
 }
