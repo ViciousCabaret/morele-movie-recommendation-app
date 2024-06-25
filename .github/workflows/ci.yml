@@ -36,5 +36,5 @@ jobs:
         continue-on-error: false
 
       - name: Run unit tests
-        run: php bin/phpunit
+        run: php bin/phpunit --testdox
         continue-on-error: false
