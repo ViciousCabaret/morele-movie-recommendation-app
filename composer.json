@@ -1,4 +1,6 @@
 {
+    "name": "viciouscabaret/movie-recommendation-app",
+    "description": "Movie recommendation app",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",

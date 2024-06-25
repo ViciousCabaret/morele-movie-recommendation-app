@@ -11,8 +11,6 @@ framework:
 
         routing:
             # Route your messages to the transports
-             'App\CQRS\Query\GetRecommendationAlgorithmListQuery': sync
-             'App\CQRS\Query\GetRecommendationsQuery': sync
 
 # when@test:
 #    framework:
